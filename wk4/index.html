@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration and Login Form</title>
+        <style>
+            /* Error message styling */
+            .error {
+                color: red;
+                font-size: 0.9em;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Registration Form -->
+        <h2>Registration Form</h2>
+        <form id="registrationForm" onsubmit="return validateRegistrationForm()">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <span id="nameError" class="error"></span><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <span id="emailError" class="error"></span><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br>
+            <span id="passwordError" class="error"></span><br>
+
+            <label for="confirmPassword">Confirm Password:</label><br>
+            <input type="password" id="confirmPassword" name="confirmPassword" required><br>
+            <span id="confirmPasswordError" class="error"></span><br>
+
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age" required><br>
+            <span id="ageError" class="error"></span><br>
+
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="Male" required> Male<br>
+            <input type="radio" id="female" name="gender" value="Female" required> Female<br>
+            <span id="genderError" class="error"></span><br>
+
+            <label for="country">Country:</label><br>
+            <select id="country" name="country" required>
+                <option value="">Select Country</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Kenya">Kenya</option>
+                <option value="Uganda">Uganda</option>
+                <option value="South Africa">South Africa</option>
+            </select>
+            <br>
+            <span id="countryError" class="error"></span><br>
+
+            <label for="terms">
+                <input type="checkbox" id="terms" name="terms" required> I accept the Terms and Conditions
+            </label><br>
+            <span id="termsError" class="error"></span><br>
+
+            <input type="submit" value="Register">
+        </form>
+
+        <br><br>
+
+        <!-- Login Form -->
+        <h2>Login Form</h2>
+        <form id="loginForm" onsubmit="return validateLoginForm()">
+            <label for="loginEmail">Email:</label><br>
+            <input type="email" id="loginEmail" name="loginEmail" required><br>
+            <span id="loginEmailError" class="error"></span><br>
+
+            <label for="loginPassword">Password:</label><br>
+            <input type="password" id="loginPassword" name="loginPassword" required><br>
+            <span id="loginPasswordError" class="error"></span><br>
+
+            <input type="submit" value="Login">
+        </form>
+
+        <script src="form-validation.js"></script>
+    </body>
+</html>
